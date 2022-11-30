@@ -1,0 +1,12 @@
+// mixin - flex base - grid base
+@mixin flexBase{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+@mixin gridBase{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: 50% 50%;
+    justify-content: center;
+}

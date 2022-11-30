@@ -1,0 +1,20 @@
+// Utilidades
+@import "utilidades/variables";
+
+@import "utilidades/mixin";
+
+@import "utilidades/extend";
+
+
+//Estilos generales
+@import "secciones/global/global";
+
+
+//Estilos - Secciones
+@import "secciones/header/header";
+
+@import "secciones/main/main";
+
+@import "secciones/section/section";
+
+@import "secciones/footer/footer";

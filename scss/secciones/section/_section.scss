@@ -1,0 +1,88 @@
+/* Estilos Section */
+
+section{
+    background: linear-gradient(45deg, rgba(37, 0, 11, 0.842) 40%, rgba(0, 23, 39, 0.438) 60%, rgba(0, 68, 35, 0.315) 90%);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.308);
+
+    #gridSectionIndex{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+    }
+
+
+    h4{
+        font-weight: 400;
+        font-size: 2rem;
+
+        @include flexBase;
+        padding-top: 1.3rem;
+
+        color: $color-titulo;
+    }
+    h5{
+        font-weight: 400;
+        font-size: 2rem;
+
+        @include flexBase;
+        padding-top: 1.3rem;
+
+        color: $color-titulo;
+    }
+
+    p{
+        color: $color-texto;
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+        text-align: justify;
+        font-size: 1.25rem;
+        align-items: center;
+    }
+}
+
+    /*Estilos Section Biografia*/
+    #sectionBio{
+    @extend %grid;
+    margin-top: 10rem;
+    background: linear-gradient(90deg, rgba(0, 49, 59, 0.774) 0%, rgba(9, 9, 121, 0.281) 35%, rgba(24, 0, 33, 0.849) 100%);
+    }
+
+    /*Estilos Section Guitarra*/
+    #sectionGuitarra{
+    @extend %grid;
+    margin-top: 7.5rem;
+    background: linear-gradient(-38.5deg, rgba(92, 0, 0, 0.582) 0%, rgba(4, 112, 139, 0.267) 35%, rgba(87, 0, 119, 0.466) 100%);
+    }
+
+    #imagen1guitarra{
+    width: 80%;
+    border-radius: 0.6rem;
+    transition: 200ms ease-in-out;
+    }
+    #imagen1guitarra:hover{
+    transform: scale(104%);
+    filter: brightness(1.25);
+    }
+
+    .divImagenGuitarra{
+        @include flexBase;
+        padding-top: 2.5rem;
+    }
+
+
+
+    #imagen2guitarra{
+    width: 78.5%;
+    border-radius: 0.6rem;
+
+    transition: 200ms ease-in-out;
+    }
+    #imagen2guitarra:hover{
+    transform: scale(104%);
+    filter: invert(1);
+    }
+
+    /* Estilos Privacidad-Sobre Nosotros */
+    #infoExterna{
+        padding-bottom: 1rem;
+    }
