@@ -21,7 +21,7 @@ body {
 
 @media (max-width: 576px) {
   body {
-    background-position-x: -25rem; } }
+    background-position-x: 33%; } }
 
 /* Estilos del header */
 header nav {
@@ -154,7 +154,7 @@ section {
     align-items: flex-start;
     padding-top: 1.3rem;
     color: white; }
-  section p {
+  section p, section li {
     color: rgba(255, 255, 255, 0.8);
     padding-left: 0.85rem;
     padding-right: 0.85rem;
@@ -198,6 +198,13 @@ section {
 #infoPrivacidadSobreNosotros {
   padding-bottom: 0.5rem; }
 
+#sectionCondiciones {
+  display: flex;
+  align-items: center; }
+  #sectionCondiciones ul li a {
+    text-decoration: none;
+    color: #ff9393; }
+
 @media (max-width: 576px) {
   #gridSectionIndex {
     display: grid;
@@ -231,7 +238,12 @@ section {
     grid-template-rows: 37% 63%; }
   #imagen2guitarraDiv {
     grid-column-start: 2;
-    grid-row: 1; } }
+    grid-row: 1; }
+  #infoPrivacidadSobreNosotros {
+    padding-left: 5%;
+    padding-right: 5%; }
+  #sectionCondiciones {
+    height: 50.25rem; } }
 
 /* Estilos Footer */
 footer {

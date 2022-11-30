@@ -24,7 +24,7 @@ section{
         color: $color-titulo;
     }
 
-    p{
+    p, li{
         color: $color-texto;
         padding-left: 0.85rem;
         padding-right: 0.85rem;
@@ -78,6 +78,19 @@ section{
         padding-bottom: 0.5rem;
     }
 
+    #sectionCondiciones{
+        display: flex;
+        align-items: center;
+        ul{
+            li{
+                a{
+                    text-decoration: none;
+                    color: $color-texto-link;
+                }
+            }
+        }
+    }
+
 
 
 
@@ -126,5 +139,13 @@ section{
     #imagen2guitarraDiv{
         grid-column-start: 2;
         grid-row: 1;
+    }
+
+    #infoPrivacidadSobreNosotros{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #sectionCondiciones{
+        height: 50.25rem;
     }
 }
