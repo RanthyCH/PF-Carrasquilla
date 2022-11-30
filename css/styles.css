@@ -1,6 +1,6 @@
-#sectionBio, #sectionGuitarra {
+#sectionGuitarra {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
   grid-row: 50% 50%;
   justify-content: center; }
 
@@ -13,13 +13,15 @@
 /* Estilos body */
 body {
   background-image: url(../img/index/bg-large.webp);
-  background-size: contain;
-  background-size: 160%;
-  background-position: top;
+  background-size: cover;
   background-repeat: no-repeat;
   text-decoration: none;
   list-style: none;
   font-weight: 300; }
+
+@media (max-width: 576px) {
+  body {
+    background-position-x: -25rem; } }
 
 /* Estilos del header */
 header nav {
@@ -83,24 +85,36 @@ header nav {
   header nav #botonActivoNav {
     font-weight: 400; }
 
+/* Media Query Header */
+@media (max-width: 576px) {
+  header nav a div {
+    padding-top: 0.75rem; }
+    header nav a div h1 {
+      font-size: 1.35rem; }
+    header nav a div img {
+      height: 36px;
+      width: 36px; }
+  header nav nav ul {
+    margin-left: 2.5rem;
+    padding-bottom: 2rem; } }
+
 /* Estilos de main */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 18rem; }
-  main #nombre {
-    transition: 125ms ease-in-out;
-    text-align: justify; }
-  main #nombre:hover {
-    transform: scale(1.1); }
+  height: 28rem; }
   main h2 {
+    text-align: center;
     color: white;
     display: flex;
     justify-content: center;
     font-size: 3rem;
-    font-weight: bolder; }
+    font-weight: bolder;
+    transition: 125ms ease-in-out; }
+  main h2:hover {
+    transform: scale(1.1); }
   main h3 {
     color: white;
     font-size: 1rem;
@@ -112,17 +126,20 @@ main {
 #mainPrivacidadSobreNosotros {
   display: none; }
 
+/*MQ main*/
+@media (max-width: 576px) {
+  main {
+    height: 20rem; }
+    main h2 {
+      font-size: 2.25rem; } }
+
 /* Estilos Section */
 section {
   background: linear-gradient(45deg, rgba(37, 0, 11, 0.842) 40%, rgba(0, 23, 39, 0.438) 60%, rgba(0, 68, 35, 0.315) 90%);
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.308); }
-  section #gridSectionIndex {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%; }
   section h4 {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -130,7 +147,8 @@ section {
     color: white; }
   section h5 {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -146,12 +164,10 @@ section {
 
 /*Estilos Section Biografia*/
 #sectionBio {
-  margin-top: 10rem;
   background: linear-gradient(90deg, rgba(0, 49, 59, 0.774) 0%, rgba(9, 9, 121, 0.281) 35%, rgba(24, 0, 33, 0.849) 100%); }
 
 /*Estilos Section Guitarra*/
 #sectionGuitarra {
-  margin-top: 7.5rem;
   background: linear-gradient(-38.5deg, rgba(92, 0, 0, 0.582) 0%, rgba(4, 112, 139, 0.267) 35%, rgba(87, 0, 119, 0.466) 100%); }
 
 #imagen1guitarra {
@@ -179,26 +195,60 @@ section {
   filter: invert(1); }
 
 /* Estilos Privacidad-Sobre Nosotros */
-#infoExterna {
-  padding-bottom: 1rem; }
+#infoPrivacidadSobreNosotros {
+  padding-bottom: 0.5rem; }
+
+@media (max-width: 576px) {
+  #gridSectionIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%; }
+  #sectionBio {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row: 50% 50%;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(0, 49, 59, 0.774) 0%, rgba(9, 9, 121, 0.281) 35%, rgba(24, 0, 33, 0.849) 100%); }
+  #sectionGuitarra {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row: 50% 50%;
+    justify-content: center;
+    background: linear-gradient(-38.5deg, rgba(92, 0, 0, 0.582) 0%, rgba(4, 112, 139, 0.267) 35%, rgba(87, 0, 119, 0.466) 100%); } }
+
+@media (min-width: 576px) {
+  #gridSectionIndex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%; }
+  #sectionBio {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 65% 35%; }
+  #sectionGuitarra {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 37% 63%; }
+  #imagen2guitarraDiv {
+    grid-column-start: 2;
+    grid-row: 1; } }
 
 /* Estilos Footer */
 footer {
-  height: 3.2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.295);
   text-shadow: 0px 0px 10px black;
-  padding-top: 5px; }
+  padding-top: 1rem; }
   footer h6 {
     color: white;
     font-weight: 100;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    padding-bottom: 0.625rem; }
   footer ul {
     display: flex;
-    gap: 10rem;
-    padding-top: 10px;
+    gap: 5rem;
     font-size: 0.95rem;
     list-style: none;
     transition: 200ms ease-in-out; }
@@ -207,3 +257,9 @@ footer {
       color: rgba(255, 255, 255, 0.8); }
     footer ul li a:hover {
       color: #00ff82; }
+
+@media (max-width: 576px) {
+  footer h6 {
+    display: none; }
+  footer ul {
+    padding-right: 2.25rem; } }

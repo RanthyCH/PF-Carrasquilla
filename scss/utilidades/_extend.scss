@@ -1,12 +1,6 @@
-%flex{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-%grid{
+%gridMobile{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     grid-row: 50% 50%;
     justify-content: center;
 }

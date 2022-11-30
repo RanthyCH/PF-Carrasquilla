@@ -5,23 +5,21 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 18rem;
-
-    #nombre{
-        transition: 125ms ease-in-out;
-        text-align: justify;
-    }
-    #nombre:hover{
-        transform: scale(1.1);
-    }
+    height: 28rem;
 
     h2{
+        text-align: center;
         color: $color-titulo;
         display: flex;
         justify-content: center;
         font-size: 3rem;
         font-weight: bolder;
+        transition: 125ms ease-in-out
     }
+    h2:hover{
+        transform: scale(1.1);
+    }
+
     h3{
         color: $color-titulo;
         font-size: 1rem;
@@ -33,4 +31,15 @@ main{
 /* Invisibilidad en Privacidad - Sobre Nosotros */
 #mainPrivacidadSobreNosotros{
     display: none;
+}
+
+
+/*MQ main*/
+@media (max-width: 576px) {
+    main{
+        height: 20rem;
+        h2{
+            font-size: 2.25rem;
+        }
+    }
 }

@@ -1,25 +1,24 @@
 /* Estilos Footer */
 
 footer{
-    height: 3.2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.295);
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
-    padding-top: 5px;
+    padding-top: 1rem;
 
     h6{
         color: $color-titulo;
         font-weight: 100;
         font-size: 1.2rem;
+        padding-bottom: 0.625rem;
     }
 
 
     ul{
         display: flex;
-        gap: 10rem;
-        padding-top: 10px;
+        gap: 5rem;
         font-size: 0.95rem;
         list-style: none;
         transition: 200ms ease-in-out;
@@ -32,6 +31,17 @@ footer{
             a:hover{
                 color: $color-botonActivo;
              }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    footer{
+        h6{
+            display: none;
+        }
+        ul{
+            padding-right: 2.25rem;
         }
     }
 }

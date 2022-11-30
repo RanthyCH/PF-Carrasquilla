@@ -8,11 +8,15 @@
 /* Estilos body */
 body{
     background-image: url(../img/index/bg-large.webp);
-    background-size: contain;
-    background-size: 160%;
-    background-position: top;
+    background-size: cover;
     background-repeat: no-repeat;
     text-decoration: none;
     list-style: none;
     font-weight: 300;
+}
+
+@media (max-width: 576px){
+    body{
+        background-position-x: -25rem;
+    }
 }
