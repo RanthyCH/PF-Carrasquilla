@@ -46,7 +46,6 @@ header nav {
     height: 5rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     align-items: center;
     column-gap: 2rem; }
     header nav ul li {
@@ -76,7 +75,6 @@ header nav {
   header nav .logo {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     transition: 200ms ease-in-out; }
   header nav .logo:hover {
     text-shadow: 0px 0px 1rem rgba(255, 255, 255, 0.555);
@@ -123,7 +121,7 @@ main {
     justify-content: center;
     font-weight: normal; }
 
-/* Invisibilidad en Privacidad - Sobre Nosotros */
+/* Invisibilidad de main en privacidad - condiciones */
 #mainPrivacidadSobreNosotros {
   display: none; }
 
@@ -141,7 +139,6 @@ section {
     font-size: 1.8rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     padding-top: 1.3rem;
     color: white; }
   section h5 {
@@ -150,7 +147,6 @@ section {
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     padding-top: 1.3rem;
     color: white; }
   section p, section li {
@@ -171,7 +167,7 @@ section {
   background: linear-gradient(-38.5deg, rgba(92, 0, 0, 0.582) 0%, rgba(4, 112, 139, 0.267) 35%, rgba(87, 0, 119, 0.466) 100%); }
 
 #imagen1guitarra {
-  width: 80%;
+  width: 22rem;
   border-radius: 0.6rem;
   transition: 200ms ease-in-out; }
 
@@ -182,11 +178,10 @@ section {
 .divImagenGuitarra {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 2.5rem; }
+  align-items: center; }
 
 #imagen2guitarra {
-  width: 78.5%;
+  width: 22rem;
   border-radius: 0.6rem;
   transition: 200ms ease-in-out; }
 
@@ -207,19 +202,23 @@ section {
   /*Index*/
   #gridSectionIndex {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%; }
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 50% 50%;
+    justify-content: space-evenly; }
   /*Biografia*/
   #sectionBio {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 65% 35%; }
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 65% 35%;
+    justify-content: center; }
   /*Guitarra*/
   #sectionGuitarra {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 48% 52%;
-    padding-bottom: 2rem; }
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 30% 70%;
+    column-gap: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 4.5rem; }
   #imagen2guitarraDiv {
     grid-column-start: 2;
     grid-row-start: 1; }
@@ -235,6 +234,12 @@ section {
     height: 50rem; } }
 
 @media (max-width: 572px) {
+  /*section guitarra mq*/
+  #sectionGuitarra {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  /*condiciones*/
   .ulCondiciones {
     font-size: 1rem;
     padding-right: 2.3rem;
@@ -265,6 +270,7 @@ footer {
     footer ul li a:hover {
       color: #00ff82; }
 
+/*MQ footer*/
 @media (max-width: 576px) {
   footer h6 {
     display: none; }

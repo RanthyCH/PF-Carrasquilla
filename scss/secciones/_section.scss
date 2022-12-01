@@ -47,7 +47,7 @@ section{
     }
 
     #imagen1guitarra{
-    width: 80%;
+    width: 22rem;
     border-radius: 0.6rem;
     transition: 200ms ease-in-out;
     }
@@ -58,13 +58,13 @@ section{
 
     .divImagenGuitarra{
         @include flexBase;
-        padding-top: 2.5rem;
+        align-items: center;
     }
 
 
 
     #imagen2guitarra{
-    width: 78.5%;
+    width: 22rem;
     border-radius: 0.6rem;
 
     transition: 200ms ease-in-out;
@@ -90,29 +90,36 @@ section{
         }
     }
 
+
+
+
 /* MQ section */
 @media (min-width: 572px){
     
     /*Index*/
     #gridSectionIndex{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 46% 46%;
         grid-template-rows: 50% 50%;
+        justify-content: space-evenly;
     }
 
     /*Biografia*/
     #sectionBio{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 47% 47%;
         grid-template-rows: 65% 35%;
+        justify-content: center;
     }
 
     /*Guitarra*/
     #sectionGuitarra{
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 48% 52%;
-        padding-bottom: 2rem;
+        grid-template-columns: 46% 46%;
+        grid-template-rows: 30% 70%;
+        column-gap: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 4.5rem;
     }
     #imagen2guitarraDiv{
         grid-column-start: 2;
@@ -135,6 +142,16 @@ section{
 }
 
 @media (max-width: 572px){
+
+    /*section guitarra mq*/
+    #sectionGuitarra{
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+    /*condiciones*/
     .ulCondiciones{
         font-size: 1rem;
         padding-right: 2.3rem;
