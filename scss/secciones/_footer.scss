@@ -17,7 +17,8 @@ footer{
 
 
     ul{
-        display: flex;
+        @include flexBase;
+
         gap: 5rem;
         font-size: 0.95rem;
         list-style: none;
@@ -27,22 +28,33 @@ footer{
             a{
                 text-decoration: none;
                 color: $color-texto;
-            }
-            a:hover{
+
+                &:hover{
                 color: $color-botonActivo;
-             }
+                }
+            }
+            
         }
     }
 }
 
-/*MQ footer*/
-@media (max-width: 576px){
-    footer{
-        h6{
-            display: none;
-        }
-        ul{
-            margin-right: 2.25rem;
+/* MQ Footer */
+    /* Celulares */
+    @media (max-width: 576px){
+        footer{
+            h6{
+                display: none;
+            }
+            ul{
+                margin-right: 2.25rem;
+            }
         }
     }
-}
+
+    /* Tablets en horizontal */
+    @media (min-width: 768px){
+        footer{
+            padding-bottom: 0.5rem;
+            padding-top: 1.5rem;
+        }
+    }

@@ -56,18 +56,18 @@ header nav {
         transition: 200ms ease-in-out;
         display: flex;
         align-items: center; }
-      header nav ul li a:active {
-        color: #00ff82; }
-      header nav ul li a:hover {
-        color: #00ff82; }
+        header nav ul li a:active {
+          color: #00ff82; }
+        header nav ul li a:hover {
+          color: #00ff82; }
   header nav .bg-transparent a {
     color: white; }
-  header nav .bg-transparent a:hover {
-    color: #00ff82;
-    text-decoration: underline;
-    text-underline-offset: -30px; }
-  header nav .bg-transparent a:focus {
-    color: #00ff82; }
+    header nav .bg-transparent a:hover {
+      color: #00ff82;
+      text-decoration: underline;
+      text-underline-offset: -30px; }
+    header nav .bg-transparent a:focus {
+      color: #00ff82; }
   header nav .navbar-toggler {
     filter: invert(1);
     background-color: rgba(255, 255, 255, 0.281);
@@ -76,13 +76,17 @@ header nav {
     display: flex;
     justify-content: center;
     transition: 200ms ease-in-out; }
-  header nav .logo:hover {
-    text-shadow: 0px 0px 1rem rgba(255, 255, 255, 0.555);
-    color: white; }
+    header nav .logo:hover {
+      text-shadow: 0px 0px 1rem rgba(255, 255, 255, 0.555);
+      color: white; }
   header nav #botonActivoNav {
     font-weight: 400; }
 
-/* Media Query Header */
+#headerPrivacidadCondiciones {
+  padding-bottom: 1rem; }
+
+/* MQ Header */
+/* Celulares */
 @media (max-width: 576px) {
   header nav a div {
     padding-top: 0.75rem; }
@@ -97,12 +101,26 @@ header nav {
   #headerPrivacidadCondiciones {
     height: 10rem; } }
 
+/* Tablets y escritorio */
+@media (min-width: 572px) {
+  header nav ul {
+    margin-left: 2.5rem;
+    padding-bottom: 2rem;
+    padding-top: 0.8rem; }
+    header nav ul li {
+      font-size: 1.3rem; } }
+
+/* Tablets en horizontal */
+@media (min-width: 768px) {
+  header {
+    padding-top: 1rem; } }
+
 /* Estilos de main */
 main {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 20rem; }
   main h2 {
     text-align: center;
@@ -112,8 +130,8 @@ main {
     font-size: 2.325rem;
     font-weight: bolder;
     transition: 125ms ease-in-out; }
-  main h2:hover {
-    transform: scale(1.1); }
+    main h2:hover {
+      transform: scale(1.1); }
   main h3 {
     color: white;
     font-size: 1rem;
@@ -126,6 +144,7 @@ main {
   display: none; }
 
 /* MQ main */
+/* Tablets y escritorio */
 @media (min-width: 576px) {
   main h2 {
     font-size: 4rem; } }
@@ -170,10 +189,9 @@ section {
   width: 22rem;
   border-radius: 0.6rem;
   transition: 200ms ease-in-out; }
-
-#imagen1guitarra:hover {
-  transform: scale(104%);
-  filter: brightness(1.25); }
+  #imagen1guitarra:hover {
+    transform: scale(104%);
+    filter: brightness(1.25); }
 
 .divImagenGuitarra {
   display: flex;
@@ -184,48 +202,49 @@ section {
   width: 22rem;
   border-radius: 0.6rem;
   transition: 200ms ease-in-out; }
-
-#imagen2guitarra:hover {
-  transform: scale(104%);
-  filter: invert(1); }
+  #imagen2guitarra:hover {
+    transform: scale(104%);
+    filter: invert(1); }
 
 /* Estilos Privacidad-Condiciones de uso */
 .sectionCondiciones {
   display: flex;
+  justify-content: center;
   align-items: center; }
   .sectionCondiciones ul li a {
     text-decoration: none;
     color: #ff9393; }
 
-/* MQ section */
+/* MQ Section */
+/* Tablets en vertical y escritorio */
 @media (min-width: 572px) {
-  /*Index*/
+  /* Index */
   #gridSectionIndex {
     display: grid;
     grid-template-columns: 46% 46%;
     grid-template-rows: 50% 50%;
     justify-content: space-evenly; }
-  /*Biografia*/
+  /* Biografia */
   #sectionBio {
     display: grid;
     grid-template-columns: 47% 47%;
     grid-template-rows: 65% 35%;
     justify-content: center; }
-  /*Guitarra*/
+  /* Guitarra */
   #sectionGuitarra {
     display: grid;
     grid-template-columns: 46% 46%;
     grid-template-rows: 30% 70%;
-    column-gap: 2rem;
+    column-gap: 1.3rem;
     padding-top: 1.5rem;
     padding-bottom: 4.5rem; }
   #imagen2guitarraDiv {
     grid-column-start: 2;
     grid-row-start: 1; }
-  /*Condiciones y Privacidad*/
+  /* Condiciones y Privacidad */
   #sectionCondicionesPrivacidad {
-    padding-left: 18%;
-    padding-right: 18%;
+    padding-left: 14%;
+    padding-right: 14%;
     display: flex;
     align-items: center; }
   .sectionCondiciones {
@@ -233,20 +252,30 @@ section {
   .sectionPrivacidad {
     height: 50rem; } }
 
+/* Celulares */
 @media (max-width: 572px) {
-  /*section guitarra mq*/
+  /* Guitarra */
   #sectionGuitarra {
     padding-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem; }
-  /*condiciones*/
+  /* Condiciones */
   .ulCondiciones {
     font-size: 1rem;
     padding-right: 2.3rem;
     padding-bottom: 0.85rem; }
-  /*Privacidad*/
+  /* Privacidad */
   .sectionPrivacidad {
     padding-bottom: 1.1rem; } }
+
+/* Escritorio */
+@media (min-width: 992px) {
+  #sectionGuitarra {
+    padding-top: 3.5rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    row-gap: 2rem;
+    column-gap: 3rem; } }
 
 /* Estilos Footer */
 footer {
@@ -263,6 +292,7 @@ footer {
     padding-bottom: 0.625rem; }
   footer ul {
     display: flex;
+    justify-content: center;
     gap: 5rem;
     font-size: 0.95rem;
     list-style: none;
@@ -270,12 +300,19 @@ footer {
     footer ul li a {
       text-decoration: none;
       color: rgba(255, 255, 255, 0.8); }
-    footer ul li a:hover {
-      color: #00ff82; }
+      footer ul li a:hover {
+        color: #00ff82; }
 
-/*MQ footer*/
+/* MQ Footer */
+/* Celulares */
 @media (max-width: 576px) {
   footer h6 {
     display: none; }
   footer ul {
     margin-right: 2.25rem; } }
+
+/* Tablets en horizontal */
+@media (min-width: 768px) {
+  footer {
+    padding-bottom: 0.5rem;
+    padding-top: 1.5rem; } }

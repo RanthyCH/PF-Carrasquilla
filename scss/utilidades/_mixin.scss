@@ -3,3 +3,9 @@
     display: flex;
     justify-content: center;
 }
+
+@mixin hoverLinks{
+    color: $color-botonActivo;
+    text-decoration: underline;
+    text-underline-offset: -30px;
+}

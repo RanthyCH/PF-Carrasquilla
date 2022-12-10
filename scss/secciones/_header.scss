@@ -35,8 +35,6 @@ header{
             align-items: center;
             column-gap: 2rem;
             
-
-
             li{
                 color: $color-titulo;
                 font-size: 1.1rem;
@@ -46,13 +44,13 @@ header{
                     transition: 200ms ease-in-out;
                     display: flex;
                     align-items: center;
-                }
 
-                a:active{
+                    &:active{
                     color: $color-botonActivo;
-                }
-                a:hover{
+                    }   
+                    &:hover{
                     color: $color-botonActivo;
+                    }
                 }
             }
         }
@@ -60,15 +58,16 @@ header{
         .bg-transparent{
             a{
                 color: $color-titulo;
-            }
-            a:hover{
+
+                &:hover{
+                @include hoverLinks;
+                }
+                &:focus{
                 color: $color-botonActivo;
-                text-decoration: underline;
-                text-underline-offset: -30px;
+                }
             }
-            a:focus{
-                color: $color-botonActivo;
-            }
+            
+            
         }
     
         .navbar-toggler{
@@ -82,46 +81,74 @@ header{
             @include flexBase;
 
             transition: 200ms ease-in-out;
-        }
-        .logo:hover{
+
+            &:hover{
             text-shadow: 0px 0px 1rem rgba(255, 255, 255, 0.555);
             color: $color-titulo;
+            }
         }
-
-
+        
         #botonActivoNav{
             font-weight: 400;
         }
     }
 }
+#headerPrivacidadCondiciones{
+    padding-bottom: 1rem;
+}
 
-/* Media Query Header */
-@media (max-width: 576px){
-    header{
-        nav{
-            a{
-                div{
-                    padding-top: 0.75rem;
-                    
-                    h1{
-                        font-size: 1.35rem;
-                    }
-                    img{
-                        height: 36px;
-                        width: 36px;
+/* MQ Header */
+    /* Celulares */
+    @media (max-width: 576px){
+        header{
+            nav{
+                a{
+                    div{
+                        padding-top: 0.75rem;
+
+                        h1{
+                            font-size: 1.35rem;
+                        }
+                        img{
+                            height: 36px;
+                            width: 36px;
+                        }
                     }
                 }
-            }
 
-            nav{
-                ul{
-                    margin-left: 2.5rem;
-                    padding-bottom: 2rem;
+                nav{
+                    ul{
+                        margin-left: 2.5rem;
+                        padding-bottom: 2rem;
+                    }
                 }
             }
         }
+        #headerPrivacidadCondiciones{
+            height: 10rem;
+        }
     }
-    #headerPrivacidadCondiciones{
-        height: 10rem;
+
+    /* Tablets y escritorio */
+    @media (min-width: 572px){
+        header{
+                nav{
+                    ul{
+                        margin-left: 2.5rem;
+                        padding-bottom: 2rem;
+                        padding-top: 0.8rem;
+
+                        li{
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+        }
     }
-}
+    
+    /* Tablets en horizontal */
+    @media (min-width: 768px){
+        header{
+            padding-top: 1rem;
+        }
+    }
